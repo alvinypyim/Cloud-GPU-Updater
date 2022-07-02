@@ -92,7 +92,7 @@ Function AWSPrivatedriver {
         }
     if ($GPU -eq "G4dn") {
         $Bucket = "nvidia-gaming"
-        $KeyPrefix = "windows/latest"
+        $KeyPrefix = "windows/vGPUSW-497.09"
         $S3Objects = Get-S3Object -BucketName $Bucket -KeyPrefix $KeyPrefix -Region us-east-1 -ProfileName $profileName
         $S3Objects.key | select-string -Pattern '.zip' 
         }
